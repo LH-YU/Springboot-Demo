@@ -26,6 +26,7 @@ public class ThymeleafController {
 
     @Autowired
     private Resource resource;
+
     @RequestMapping("/index")
     public String index(ModelMap map) {
         map.addAttribute("test", "testForThymeleaf");
@@ -66,7 +67,7 @@ public class ThymeleafController {
         userList.add(u1);
         userList.add(u2);
 
-        map.addAttribute("userList", userList);
+        map.addAttribute("data", userList);
 
         return "thymeleaf/center/test";
     }

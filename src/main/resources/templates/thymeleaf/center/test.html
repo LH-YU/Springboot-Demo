@@ -77,7 +77,7 @@ URL:<br/>
         <th>年龄备注</th>
         <th>生日</th>
     </tr>
-    <tr th:each="person:${userList}">
+    <tr th:each="person:${data}">
         <td th:text="${person.name}"></td>
         <td th:text="${person.age}"></td>
         <td th:text="${person.age gt 18} ? 你老了 : 你很年轻">18岁</td>
